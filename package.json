@@ -1,0 +1,27 @@
+{
+  "name": "solo-project",
+  "version": "1.0.0",
+  "description": "This is my first solo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "XXX",
+    "show": "open index2.html -a 'Google Chrome'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StackOverFlowWhereArtThou/Codesmith_SoloProject_1.git"
+  },
+  "keywords": [
+    "solo",
+    "project"
+  ],
+  "author": "Harry Fox",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/StackOverFlowWhereArtThou/Codesmith_SoloProject_1/issues"
+  },
+  "homepage": "https://github.com/StackOverFlowWhereArtThou/Codesmith_SoloProject_1#readme",
+  "dependencies": {
+    "@arcgis/core": "^4.18.1"
+  }
+}
