@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>This is the form page</div>
+    <form method="POST" action='/event'>
+        <input name="eventName" type="text" placeholder="Event Name"></input>
+        <input name="address" type="text" placeholder="Event Location"></input>
+        <input name="lat" type="text" placeholder="Lattitude"></input>
+        <input name="long" type="text" placeholder="Longitude"></input>
+        <input type="radio" id="showcase" name="type" value="showcase">
+        <label for="showcase">Showcase</label>
+        <input type="radio" id="openMic" name="type" value="openMic">
+        <label for="openMic">Open Mic</label>
+        <input type="radio" id="other" name="type" value="other">
+        <label for="other">Other</label>
+        <input type='submit' value="login">
+      </form>
+      <a href='./signup'>Sign up</a>
+      <script src="build/bundle.js"></script>
+</body>
+</html>
