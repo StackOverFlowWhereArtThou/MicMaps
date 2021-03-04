@@ -12,7 +12,10 @@ module.exports = {
   devServer: {
     publicPath: "/build/",
     proxy: {
-      "/assets": "http://localhost:3000",
+      '/assets': 'http://localhost:3000',
+      '/data': 'http://localhost:3000',
+      '/form': 'http://localhost:3000',
+      '/event': 'http://localhost:3000',
     },
   },
 

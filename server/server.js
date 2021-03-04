@@ -20,6 +20,12 @@ app.get("/", (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get("/data",eventController.getEvents, (req, res) => {
+  console.log("we have triggered a data get request!");
+  console.log(res.locals.events);
+  return res.status(200).json(res.locals.events);
+});
+
 app.get('/form', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../form.html'));
 });

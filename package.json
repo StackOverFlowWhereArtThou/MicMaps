@@ -8,7 +8,7 @@
     "build": "webpack",
     "show": "open index.html -a 'Google Chrome'",
     "start": "nodemon server/server.js",
-    "dev": "export NODE_ENV=development && webpack serve && nodemon server/server.js",
+    "dev": "webpack serve & nodemon server/server.js",
     "copy": "cp -R ./node_modules/@arcgis/core/assets ./build"
   },
   "repository": {

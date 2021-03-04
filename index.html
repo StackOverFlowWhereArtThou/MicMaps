@@ -7,13 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- This formats the map API -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
 </head>
 
 <body>
-    <div id="viewDiv"></div>
-    <div id="testDiv">This is a test, and I need styling around it</div>
-    <div id="root"></div>
-    <div id="form"></div>
+    <div id="mainContainer">
+        <div id="viewDiv"></div>
+        <!-- <div id="testDiv">This is a test, and I need styling around it</div> -->
+        <div id="leftContainer">
+            <div id="root"></div>
+            <a href="/form"><button>Submit an event</button></a>
+        </div>
+        <!-- <div id="form"></div> -->
+    </div>
 
     <script src="build/bundle.js"></script>
 </body>

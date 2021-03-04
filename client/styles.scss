@@ -1,5 +1,6 @@
 html,
 body,
+#mainContainer,
 #viewDiv {
   padding: 0;
   margin: 0;
@@ -7,10 +8,28 @@ body,
   width: 100%;
 }
 
+#mainContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+#leftContainer{
+  border: 5px dashed pink;
+  display: flex;
+  flex-direction: column;
+}
+
 form{
   width: 500px;
   display: flex;
   flex-direction: column;
+}
+
+#formRadioButtons{
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #viewDiv{
@@ -25,6 +44,12 @@ form{
 
 #form{
   border: 10px solid purple;
+  width: 300px;
+  height: 300px;
+}
+
+#root{
+  border: 10px solid blue;
   width: 300px;
   height: 300px;
 }
