@@ -43,17 +43,17 @@ fetch("/data")
 
 
     const myMap = new Map({
-      basemap: "arcgis-navigation"             // Create a Map object
+      basemap: "arcgis-navigation", // Create a Map object
       // basemap: "streets-vector",
       // basemap: "arcgis-topographic"
       // layers: additionalLayers             // Optionally, add additional layers collection
     });
 
-    const mapView = new MapView({          // The View for the Map object
+    const mapView = new MapView({ // The View for the Map object
       map: myMap,
       // center: [-118.805, 34.027], // LA
       // center: [-122.3321,47.6062], // Seattle
-      center: [-87.6298,41.8781], // Chicago
+      center: [-87.6298, 41.8781], // Chicago
       zoom: 10,
       container: "viewDiv"
     });
@@ -71,9 +71,9 @@ fetch("/data")
     // put points on the map with data
     for (let i = 0; i < pointData.length; i++) {
       let typeColor;
-      if(pointData[i].type === 'openMic'){
+      if (pointData[i].type === 'openMic') {
         typeColor = [226, 119, 40] // Orange
-      } else if(pointData[i].type === 'showcase'){
+      } else if (pointData[i].type === 'showcase') {
         typeColor = [128, 0, 128] // Purple 
       } else {
         typeColor = [128, 128, 128] // Gray
@@ -86,7 +86,7 @@ fetch("/data")
           color: [255, 255, 255], // White
           width: 1
         }
-      };  
+      };
 
       let popupTemplate = {
         title: "{Type} - {Name}",
@@ -96,11 +96,11 @@ fetch("/data")
         Name: pointData[i].eventName,
         Type: (pointData[i].type === "openMic") ? "Open Mic" : (pointData[i].type === "showcase") ? "Showcase" : "Other Comedy Event",
         Address: pointData[i].address,
-        StartTime: "NEEDS UPDATE",
-        DayOfWeek: "NEEDS UPDATE",
+        StartTime: pointData[i].startTime,
+        DayOfWeek: pointData[i].dayOfWeek,
       }
-  
-      
+
+
       let pointGraphic = new Graphic({
         geometry: { //Create a point
           type: "point",

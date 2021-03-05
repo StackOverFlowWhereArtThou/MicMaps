@@ -13,6 +13,8 @@ const eventSchema = new Schema({
   lat: { type: Number, required: true },
   long: { type: Number, required: true },
   type: { type: String, required: true },
+  startTime: { type: String, required: true },
+  dayOfWeek: { type: String, required: true },
   eventKey: { type: String, required: true },
 });
 

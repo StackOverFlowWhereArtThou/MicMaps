@@ -67,6 +67,7 @@ form{
 }
 
 #formContainer{
+  overflow: scroll;
   border: 6px solid black;
   margin: 30px;
   width: 50%;

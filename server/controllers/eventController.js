@@ -29,7 +29,9 @@ eventController.addEvent = async (req, res, next) => {
       lat: req.body.lat,
       long: req.body.long,
       type: req.body.type,
-      eventKey: req.body.eventKey
+      startTime: req.body.startTime,
+      dayOfWeek: req.body.dayOfWeek,
+      eventKey: req.body.eventKey,
     });
 
     console.log('newEvent', newEvent);
