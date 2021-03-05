@@ -8,9 +8,33 @@ body,
   width: 100%;
 }
 
+body{
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 2px;
+}
+
+#headerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:start;
+}
+
 #mainContainer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#mainContainer button{
+  width: 500px;
+  height: 30px;
 }
 
 #leftContainer{
@@ -25,7 +49,7 @@ form{
   flex-direction: column;
 }
 
-#formRadioButtons{
+.formRadioButtons{
   border: 2px solid green;
   display: flex;
   flex-direction: row;
@@ -34,18 +58,30 @@ form{
 
 #viewDiv{
     height: 80%;
-    width: 80%;
-    border: 5px solid green
+    width: 95%;
+    // border: 5px solid green
 }
 
 #testDiv{
     border: 10px solid black;
 }
 
-#form{
-  border: 10px solid purple;
-  width: 300px;
-  height: 300px;
+#formContainer{
+  border: 6px solid black;
+  margin: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items:center;
+}
+
+form{
+  // border: 10px solid purple;
+  width: 75%;
+  // height: 300px;
+  margin: 5px;
+
 }
 
 #root{

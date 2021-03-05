@@ -38,6 +38,11 @@ app.post('/event', eventController.addEvent, (req, res) => {
   res.redirect('../');
 });
 
+app.patch('/event', eventController.updateEvent, (req, res) => {
+  console.log('event patch requested');
+  res.redirect('../');
+});
+
 /**
  * 404 handler
  */

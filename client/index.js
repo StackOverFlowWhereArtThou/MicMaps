@@ -20,10 +20,10 @@ import esriConfig from '@arcgis/core/config';
 import FormTemplate from '@arcgis/core/form/FormTemplate';
 import FeatureForm from '@arcgis/core/widgets/FeatureForm'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
 
 let pointData;
 fetch("/data")
@@ -39,7 +39,6 @@ fetch("/data")
     },
   )
   .then(() => {
-
     esriConfig.apiKey = "AAPK8e0c4cb7f5734144aa2d85268219fe7183Y2n2bQ0imhF6a1zMG9z6wMNJyrGaOyLzTxDWyXiotnzo4Ak7HngSGNreDkWErV";
 
 
@@ -69,17 +68,7 @@ fetch("/data")
     const graphicsLayer = new GraphicsLayer();
     myMap.add(graphicsLayer);
 
-    // const simpleMarkerSymbol = {
-    //   type: "simple-marker",
-    //   color: [226, 119, 40],  // Orange
-    //   outline: {
-    //     color: [255, 255, 255], // White
-    //     width: 1
-    //   }
-    // };
-
-
-    // for (let i = 0; i < pointArr.length; i++) {
+    // put points on the map with data
     for (let i = 0; i < pointData.length; i++) {
       let typeColor;
       if(pointData[i].type === 'openMic'){
@@ -100,12 +89,15 @@ fetch("/data")
       };  
 
       let popupTemplate = {
-        title: "{Name}",
-        content: "{Description}"
+        title: "{Type} - {Name}",
+        content: "<strong>Details</strong><ul><li>Address: {Address}</li><li>Start Time: {StartTime}</li><li>Day: {DayOfWeek}</li></ul>"
       }
       let attributes = {
-        Name: "Graphic",
-        Description: "I am a polygon"
+        Name: pointData[i].eventName,
+        Type: (pointData[i].type === "openMic") ? "Open Mic" : (pointData[i].type === "showcase") ? "Showcase" : "Other Comedy Event",
+        Address: pointData[i].address,
+        StartTime: "NEEDS UPDATE",
+        DayOfWeek: "NEEDS UPDATE",
       }
   
       
